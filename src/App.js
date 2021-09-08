@@ -3,11 +3,11 @@ import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants/index';
 import './App.css';
 
+import Nav from './components/Nav';
 import Image from './components/Image';
 
 function App() {
   const [data, setData] = useState([]);
-
 
   useEffect(() => {
     axios.get(`${BASE_URL}${API_KEY}`)
@@ -19,11 +19,26 @@ function App() {
       })
   }, [])
 
+
+  const Card = () => {
+    return (
+    <div>
+      <p>{data.explanation}</p>
+    </div>
+    )
+  }
+
+  const changeDate = () => {
+    
+  }
+
   return (
     <div className="App">
+      <Nav data={data} component={Nav} />
       <Image data={data} component={Image} />
+      {/* <button onClick={Card}>Info?</button> */}
       <p>
-        <span>🚀</span>
+        <span role="img" aria-label='click-for-info'>🚀</span>
       </p>
     </div>
   );
