@@ -1,5 +1,13 @@
+body {
+  background-color:black;
+}
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+  background-color:rgb(66, 56, 128);
 }
 
 .App-logo {
@@ -36,3 +44,33 @@
     transform: rotate(360deg);
   }
 }
+
+/*NAV SECTION*/
+.Nav {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:3rem;
+  background-color:rgb(56, 47, 109);
+}
+
+
+
+/*IMAGE SECTION*/
+/* .Image{
+  width: 60%;
+  height: 40rem;
+  /* border:1px solid red; */
+} */
+
+.Image-container img{
+    width:100%;
+    height:30rem;
+    object-fit:cover;
+    opacity:90%;
+  }
+  
+.Image-container img:hover{
+    opacity: 100%;
+  }
